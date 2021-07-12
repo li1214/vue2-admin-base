@@ -1,0 +1,268 @@
+@import "./var";
+/* 改变 icon 字体路径变量，必需 */
+$--font-path: "~element-ui/lib/theme-chalk/fonts";
+//@import "~element-ui/packages/theme-chalk/src/index";
+
+@import "~element-ui/packages/theme-chalk/src/base.scss";
+@import "~element-ui/packages/theme-chalk/src/pagination.scss";
+@import "~element-ui/packages/theme-chalk/src/dialog.scss";
+@import "~element-ui/packages/theme-chalk/src/autocomplete.scss";
+@import "~element-ui/packages/theme-chalk/src/dropdown.scss";
+@import "~element-ui/packages/theme-chalk/src/dropdown-menu.scss";
+@import "~element-ui/packages/theme-chalk/src/dropdown-item.scss";
+@import "~element-ui/packages/theme-chalk/src/menu.scss";
+@import "~element-ui/packages/theme-chalk/src/submenu.scss";
+@import "~element-ui/packages/theme-chalk/src/menu-item.scss";
+@import "~element-ui/packages/theme-chalk/src/menu-item-group.scss";
+@import "~element-ui/packages/theme-chalk/src/input.scss";
+@import "~element-ui/packages/theme-chalk/src/input-number.scss";
+@import "~element-ui/packages/theme-chalk/src/radio.scss";
+@import "~element-ui/packages/theme-chalk/src/radio-group.scss";
+@import "~element-ui/packages/theme-chalk/src/radio-button.scss";
+@import "~element-ui/packages/theme-chalk/src/checkbox.scss";
+@import "~element-ui/packages/theme-chalk/src/checkbox-button.scss";
+@import "~element-ui/packages/theme-chalk/src/checkbox-group.scss";
+@import "~element-ui/packages/theme-chalk/src/switch.scss";
+@import "~element-ui/packages/theme-chalk/src/select.scss";
+@import "./button";
+@import "~element-ui/packages/theme-chalk/src/button-group.scss";
+@import "~element-ui/packages/theme-chalk/src/table.scss";
+@import "~element-ui/packages/theme-chalk/src/table-column.scss";
+@import "~element-ui/packages/theme-chalk/src/date-picker.scss";
+// @import "~element-ui/packages/theme-chalk/src/time-select.scss";
+// @import "~element-ui/packages/theme-chalk/src/time-picker.scss";
+@import "~element-ui/packages/theme-chalk/src/popover.scss";
+@import "~element-ui/packages/theme-chalk/src/tooltip.scss";
+@import "~element-ui/packages/theme-chalk/src/message-box.scss";
+@import "~element-ui/packages/theme-chalk/src/breadcrumb.scss";
+@import "~element-ui/packages/theme-chalk/src/breadcrumb-item.scss";
+@import "~element-ui/packages/theme-chalk/src/form.scss";
+@import "~element-ui/packages/theme-chalk/src/form-item.scss";
+@import "~element-ui/packages/theme-chalk/src/tabs.scss";
+@import "~element-ui/packages/theme-chalk/src/tab-pane.scss";
+@import "~element-ui/packages/theme-chalk/src/tag.scss";
+@import "~element-ui/packages/theme-chalk/src/tree.scss";
+@import "~element-ui/packages/theme-chalk/src/alert.scss";
+@import "~element-ui/packages/theme-chalk/src/notification.scss";
+@import "~element-ui/packages/theme-chalk/src/slider.scss";
+@import "~element-ui/packages/theme-chalk/src/loading.scss";
+@import "~element-ui/packages/theme-chalk/src/row.scss";
+@import "~element-ui/packages/theme-chalk/src/col.scss";
+@import "~element-ui/packages/theme-chalk/src/upload.scss";
+@import "~element-ui/packages/theme-chalk/src/progress.scss";
+@import "~element-ui/packages/theme-chalk/src/spinner.scss";
+@import "./message";
+@import "~element-ui/packages/theme-chalk/src/badge.scss";
+// @import "~element-ui/packages/theme-chalk/src/card.scss";
+@import "~element-ui/packages/theme-chalk/src/rate.scss";
+@import "~element-ui/packages/theme-chalk/src/steps.scss";
+@import "~element-ui/packages/theme-chalk/src/step.scss";
+// @import "~element-ui/packages/theme-chalk/src/carousel.scss";*/
+@import "~element-ui/packages/theme-chalk/src/scrollbar.scss";
+/*@import "~element-ui/packages/theme-chalk/src/carousel-item.scss";*/
+@import "~element-ui/packages/theme-chalk/src/collapse.scss";
+@import "~element-ui/packages/theme-chalk/src/collapse-item.scss";
+/*@import "~element-ui/packages/theme-chalk/src/cascader.scss";*/
+@import "~element-ui/packages/theme-chalk/src/color-picker.scss";
+@import "~element-ui/packages/theme-chalk/src/transfer.scss";
+@import "~element-ui/packages/theme-chalk/src/container.scss";
+@import "~element-ui/packages/theme-chalk/src/header.scss";
+@import "~element-ui/packages/theme-chalk/src/aside.scss";
+@import "~element-ui/packages/theme-chalk/src/main.scss";
+/*@import "~element-ui/packages/theme-chalk/src/footer.scss";
+@import "~element-ui/packages/theme-chalk/src/timeline.scss";
+@import "~element-ui/packages/theme-chalk/src/timeline-item.scss";
+@import "~element-ui/packages/theme-chalk/src/link.scss";
+@import "~element-ui/packages/theme-chalk/src/divider.scss";
+@import "~element-ui/packages/theme-chalk/src/image.scss";
+@import "~element-ui/packages/theme-chalk/src/calendar.scss";*/
+@import "~element-ui/packages/theme-chalk/src/backtop.scss";
+@import "~element-ui/packages/theme-chalk/src/infiniteScroll.scss";
+//@import "~element-ui/packages/theme-chalk/src/page-header.scss";
+//@import "~element-ui/packages/theme-chalk/src/cascader-panel.scss";
+@import "~element-ui/packages/theme-chalk/src/avatar.scss";
+@import "~element-ui/packages/theme-chalk/src/drawer.scss";
+
+.el-pagination .el-select .el-input .el-input__inner {
+  height: 28px !important;
+}
+//loading遮罩层级
+.el-loading-parent--relative {
+  z-index: 1;
+}
+
+.el-button {
+  [class*="fa-"] + span {
+    margin-left: 5px;
+  }
+}
+
+.el-dialog__header {
+  border-bottom: 1px solid $--border-color-base;
+  padding: 14px;
+}
+.el-dialog__footer {
+  border-top: 1px solid $--border-color-base;
+  padding: 10px 20px;
+}
+.el-dialog__title {
+  font-size: 16px;
+}
+.el-dialog__body {
+  padding: 20px;
+}
+.el-form.el-form--label-top {
+  .el-select,
+  .el-cascader,
+  .el-input-number,
+  .el-autocomplete,
+  .el-date-editor {
+    width: 100%;
+  }
+}
+
+.el-table {
+  color: $--color-text-primary;
+  thead th {
+    background: $--background-color-base;
+    color: $--color-text-regular;
+  }
+}
+.el-tree {
+  color: $--color-text-primary;
+  svg {
+    fill: $--color-text-primary;
+  }
+}
+
+.el-table {
+  &.el-table--small {
+    .el-table__body {
+      > tbody {
+        > tr {
+          > td {
+            .el-button.el-button--text {
+              border: none;
+              margin: 0 8px;
+              &:last-child {
+                margin: 0 0 0 8px;
+              }
+              &:first-child {
+                margin: 0 8px 0 0;
+              }
+              padding: 0;
+              svg {
+                margin: 0;
+                width: 16px;
+                height: 16px;
+              }
+            }
+            .el-dropdown {
+              .el-button.el-button--text {
+                margin: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.el-table--mini,
+.el-table--small,
+.el-table__expand-icon {
+  font-size: 14px;
+}
+.el-tree {
+  .el-button.el-button--text {
+    svg {
+      margin: 0;
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+.el-tree-node__content {
+  font-size: $--font-size-base;
+}
+
+.el-button.el-button--small:not(.el-transfer__button) {
+  min-width: 74px;
+  &.is-circle,
+  &.el-button--text {
+    min-width: unset;
+  }
+}
+.el-button-group {
+  .el-button.el-button--small {
+    min-width: unset;
+  }
+}
+.el-radio-group {
+  &.is-plain {
+    .el-radio-button__orig-radio:checked + .el-radio-button__inner {
+      background-color: mix($--color-primary, $--color-white, 15%);
+      border-color: $--color-primary-light-5;
+      color: $--color-primary;
+      box-shadow: -1px 0 0 0 mix($--color-primary, $--color-white, 15%);
+    }
+    .el-radio-button {
+      &.is-active {
+        .el-radio-button__inner {
+          box-shadow: -1px 0 0 0 $--color-primary-light-5;
+        }
+      }
+      &.is-disabled {
+        .el-radio-button__inner {
+          background-color: $--border-color-extra-light;
+        }
+      }
+    }
+  }
+}
+.el-form {
+  &.el-form--label-top {
+    .el-form-item.el-form-item--small {
+      margin-bottom: 28px;
+      .el-form-item__label {
+        padding-bottom: 8px;
+        line-height: 22px;
+      }
+    }
+    //查看时在form上加上该class
+    &.el-form--detail {
+      .el-form-item__label {
+        color: $--color-text-secondary;
+      }
+      .el-form-item__content {
+        color: $--color-text-primary;
+      }
+    }
+  }
+  &.el-form--inline {
+    .el-form-item.el-form-item--small {
+      margin-bottom: 12px;
+    }
+  }
+}
+.el-form-item--small .el-form-item__error {
+  line-height: 18px;
+}
+
+.el-tabs__header {
+  margin: 0 0 20px;
+}
+.el-steps {
+  .el-step__line {
+    height: 1px !important;
+    overflow: hidden;
+    background-color: $--border-color-base;
+  }
+  .el-step__icon.is-text {
+    border-width: 1px;
+  }
+}
+
+.el-table__empty-text {
+  line-height: 80px;
+}
