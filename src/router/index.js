@@ -61,27 +61,26 @@ export const constantRoutes = [
       {
         path: 'table',
         name: 'Table',
-        component: () => import('@/views/table/index'),
+        component: () => import('@/views/example/table'),
         meta: { title: 'table', icon: 'table' }
       },
       {
         path: 'tree',
         name: 'Tree',
-        component: () => import('@/views/tree/index'),
+        component: () => import('@/views/example/tree'),
         meta: { title: 'tree', icon: 'tree' }
-      }
-    ]
-  },
-
-  {
-    path: '/form',
-    component: Layout,
-    children: [
+      },
       {
-        path: 'index',
+        path: 'form',
         name: 'Form',
-        component: () => import('@/views/form/index'),
+        component: () => import('@/views/example/form'),
         meta: { title: 'form', icon: 'form' }
+      },
+      {
+        path: 'editor',
+        name: 'Editor',
+        component: () => import('@/views/example/editor'),
+        meta: { title: 'editor', icon: 'link' }
       }
     ]
   },

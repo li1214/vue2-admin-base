@@ -1,6 +1,7 @@
 'use strict'
 const path = require('path')
 const defaultSettings = require('./src/settings.js')
+const WebpackBuildNotifierPlugin = require('webpack-build-notifier')
 
 function resolve(dir) {
   return path.join(__dirname, dir)
@@ -28,7 +29,29 @@ module.exports = {
       alias: {
         '@': resolve('src')
       }
-    }
+    },
+    module: {
+      rules: [
+        {
+          test: /\.(png|jpg|gif)$/i,
+          use: [
+            {
+              loader: 'url-loader',
+              options: {
+                limit: 8192
+              }
+            }
+          ]
+        }
+      ]
+    },
+    plugins: [
+      new WebpackBuildNotifierPlugin({
+        title: 'Vxi Ai Admin',
+        logo: path.resolve('./public/favicon.png'),
+        suppressSuccess: true // don't spam success notifications
+      })
+    ]
   },
   chainWebpack(config) {
     config.plugin('preload').tap(() => [
@@ -54,7 +77,6 @@ module.exports = {
         symbolId: 'icon-[name]'
       })
       .end()
-
     config
       .when(process.env.NODE_ENV !== 'development',
         config => {
@@ -89,7 +111,6 @@ module.exports = {
                 }
               }
             })
-          // https:// webpack.js.org/configuration/optimization/#optimizationruntimechunk
           config.optimization.runtimeChunk('single')
         }
       )

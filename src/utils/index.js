@@ -19,11 +19,8 @@ export function parseTime(time, cFormat) {
   } else {
     if ((typeof time === 'string')) {
       if ((/^[0-9]+$/.test(time))) {
-        // support "1548221490638"
         time = parseInt(time)
       } else {
-        // support safari
-        // https://stackoverflow.com/questions/4310953/invalid-date-in-safari
         time = time.replace(new RegExp(/-/gm), '/')
       }
     }
@@ -114,4 +111,11 @@ export function param2Obj(url) {
     }
   })
   return obj
+}
+
+export function html2text(html) {
+  const div = document.createElement('div')
+  div.innerHTML = html
+  const text = div.innerText
+  return text
 }

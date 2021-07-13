@@ -6,7 +6,8 @@ export default {
     example: 'Example',
     form: 'Form',
     nested: 'Nested',
-    other: 'Other'
+    other: 'Other',
+    editor: 'Editor'
   },
   common: {
     home: 'Home',
